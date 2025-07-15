@@ -1,0 +1,116 @@
+
+===========================
+DOCUMENTAÇÃO DO APLICATIVO - SEJA
+===========================
+
+**Nome do app:** Seja
+**Slogan:** "Seja quem você quiser ser."
+**Tipo:** Rede Social Interativa e Livre
+
+---------------------------
+📝 DESCRIÇÃO
+---------------------------
+O *Seja* é uma rede social onde os usuários criam perfis livres, com nomes e avatares fictícios ou reais, e compartilham pensamentos, histórias e ideias.
+
+Aqui, não é necessário mostrar a identidade verdadeira. É um espaço para explorar versões criativas, introspectivas ou idealizadas de si mesmo.
+
+---------------------------
+🎯 OBJETIVO
+---------------------------
+Criar um ambiente acolhedor onde cada pessoa possa:
+- Expressar pensamentos em formato de postagem.
+- Criar perfis criativos e personalizados.
+- Interagir com os outros por curtidas, comentários e mensagens.
+- Sentir liberdade para ser quem quiser, sem julgamentos.
+
+---------------------------
+👥 PÚBLICO-ALVO
+---------------------------
+- Jovens e adultos criativos.
+- Pessoas introspectivas ou tímidas.
+- Artistas, escritores e pensadores.
+- Usuários que buscam anonimato saudável e liberdade de expressão.
+
+---------------------------
+🔑 FUNCIONALIDADES PRINCIPAIS
+---------------------------
+**Perfis:**
+- Nome livre e avatar fictício ou real.
+- Biografia e interesses.
+- Hashtags personalizadas.
+
+**Feed:**
+- Postagens em texto, imagem ou link.
+- Curtidas e comentários.
+
+**Mensagens privadas:**
+- Chat direto entre usuários.
+
+**Explorar:**
+- Busca por hashtags e perfis relacionados.
+
+**Privacidade:**
+- Sem obrigatoriedade de dados reais.
+- Perfil público ou privado.
+- Moderação e denúncia de conteúdo.
+
+---------------------------
+🖼️ IDENTIDADE VISUAL
+---------------------------
+- Interface minimalista e intuitiva.
+- Cores: azul suave, branco e cinza.
+- Ícones simples, foco no conteúdo.
+
+---------------------------
+🛠️ TECNOLOGIAS SUGERIDAS
+---------------------------
+- Frontend: React / Next.js
+- Backend: Firebase ou Node.js + Express
+- Banco de Dados: Firestore / MongoDB
+- Hospedagem: Vercel / Netlify
+- Extra: IA para sugestões de post e avatar
+
+---------------------------
+🧩 DIFERENCIAIS DO SEJA
+---------------------------
+- Liberdade de identidade com segurança.
+- Rede social + blog pessoal + diário criativo.
+- Ideal para expressão individual sem pressão.
+- Acolhimento de perfis não convencionais.
+
+---------------------------
+📅 ROADMAP (ETAPAS DE DESENVOLVIMENTO)
+---------------------------
+Fase 1: Protótipo visual + HTML funcional ............. ✅ Concluído
+Fase 2: CSS + HTML funcional ............. 🔄 Em planejamento
+Fase 3: Sistema de login + criação de perfil .......... 🔄 Em planejamento
+Fase 4: Feed com banco de dados real ................. 🔄 Em planejamento
+Fase 5: Curtidas, comentários, mensagens ............. ❌ Ainda não iniciado
+Fase 6: Explorar, notificações, moderação ............ ❌ Ainda não iniciado
+
+---------------------------
+📈 POSSIBILIDADES FUTURAS
+---------------------------
+- App mobile (React Native / Flutter)
+- Comunidades temáticas
+- IA para ajuda na criação de posts
+- Assinatura premium com recursos extras
+
+---------------------------
+🔄 FUNCIONALIDADES ADICIONAIS
+---------------------------
+
+**1. Reações personalizadas**  
+Oferece múltiplas reações além do "curtir", como: 💖 Amor, 😲 Surpreso, 👏 Apoio, 😢 Triste, entre outras. Isso dá mais nuance e profundidade às interações, valorizando a intenção de quem interage com o conteúdo.  
+💡 Ideal para uma rede voltada à expressão emocional e criativa.
+
+**2. Modos de visibilidade em posts**  
+Ao criar uma nova postagem, o usuário pode escolher entre diferentes níveis de visibilidade:  
+- **Público** (visível para todos)  
+- **Seguidores apenas**  
+- **Privado** (somente para o próprio usuário ou amigos selecionados)  
+Essa função aumenta a sensação de controle e segurança, permitindo que cada pessoa compartilhe com o público que desejar.
+
+**3. Feedback anônimo**  
+Permitir que usuários enviem comentários ou mensagens de forma anônima a outros perfis (caso estes habilitem essa opção). Essa funcionalidade incentiva a expressão autêntica, sem medo de julgamentos, e pode ser usada para elogios, conselhos ou até desabafos.  
+⚠️ Todos os feedbacks anônimos passam por filtros de moderação automática para evitar abusos ou discurso de ódio.
