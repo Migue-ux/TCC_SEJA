@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #13293d;
+  font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.nav-bar {
+  background-color: #121219;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 90px;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  font-family: "Bungee", sans-serif;
+  text-decoration: none;
+  color: #7043CA;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #c2c2c2;
+  border-radius: 4px;
+}
+
+.avatar-home {
+  border: #c2c2c2 solid 2px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.avatar-home:hover {
+  cursor: pointer;
+  border-color: #7043CA;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* CONTEÚDO */
+.conteiner {
+  display: flex;
+  padding: 2rem;
+}
+
+/* PERFIL LATERAL */
+.bar-perfil {
+  background-color: #483078;
+  width: 25%;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(93, 93, 93, 0.2);
+  text-align: center;
+  margin-right: 2rem;
+  height: 300px;
+}
+
+.bar-perfil img {
+  border-radius: 50%;
+  width: 25%;
+  height: auto;
+  object-fit: cover;
+  border: #fff solid 2px;
+}
+
+.bar-perfil h3 {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.bar-perfil p {
+  font-size: 16px;
+  text-align: justify;
+  margin: 0.5rem 0;
+}
+
+/* ÁREA DE POSTAGENS */
+.area-postagens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* COMENTÁRIO */
+.comentar {
+  width: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.comentar small{
+  color: #fff;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  text-align: right;
+  font-weight: bold;
+  transition: color 0.3s;
+  cursor: default;
+ 
+  
+}
+
+.comentar textarea {
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  min-height: 70px;
+}
+
+.comentar button {
+  background-color: #7043CA;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 16px;
+  width: 120px;  
+  height: 40px; 
+  align-self: flex-end;
+  box-shadow: 0 2px 5px rgba(139, 54, 236, 0.986);
+  border: 1px solid #8737e2;
+
+}
+
+.comentar button:hover {
+  background-color: #4714ad;
+}
+
+/* POSTAGENS */
+.post, .post-foto {
+  width: 55em;
+  margin: 20px 0;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: #e7dbee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post img, .avatar-post {
+  width: 100px;
+  height: auto;
+  border: #891be4 solid 5px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.foto-post {
+  width: 50%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.reactions button {
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #5f4975;
+  color: #fff;
+  height: 30px;
+}
+
+.reactions button:hover {
+  background-color: #483078;
+}
+
+/* COMENTÁRIOS DINÂMICOS */
+.comentario {
+  background-color: #7043CA;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 6px;
+  width: 90%;
+  align-self: flex-start;
+  word-wrap: break-word;
+}

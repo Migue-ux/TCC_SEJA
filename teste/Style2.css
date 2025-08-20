@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #13293d;
+  font-family: Arial, sans-serif;
+  display: flex; /* Para alinhar navbar + conteúdo lado a lado */
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* NAVBAR LATERAL */
+.nav-bar {
+  background-color: #121219;
+  width: 220px;
+  height: 100vh; /* ocupa toda a altura da tela */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.logo img {
+  height: 120px;  /* altura da logo */
+  width: 150px; /* mantém a proporção da imagem */
+  object-fit: contain;
+  margin-bottom: 40px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.nav-links a {
+  font-family: "Bungee", sans-serif;
+  text-decoration: none;
+  color: #7043CA;
+  font-weight: bold;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+.nav-links a:hover {
+  background-color: #7043CA;
+  color: #fff;
+}
+
+/* Avatar na parte inferior da navbar */
+.avatar-home {
+  border: 2px solid #c2c2c2;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 25px;
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+.avatar-home:hover {
+  cursor: pointer;
+  border-color: #7043CA;
+  size: 50px;
+  transform: scale(1.05);
+  position: relative;
+  top: -5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  
+  
+  
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteiner {
+  margin-left: 220px; /* espaço para a navbar */
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* POSTAGEM */
+.post-foto {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-post {
+  width: 100px;
+  height: auto;
+  border: #891be4 solid 5px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.foto-post {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.comentar {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.comentar textarea {
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  font-family: Arial, sans-serif;
+  min-height: 70px;
+}
+
+.comentar button {
+  background-color: #7043CA;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.comentar button:hover {
+  background-color: #4714ad;
+}
+
+.comentarios {
+  margin-top: 1rem;
+  width: 100%;
+  color: #000;
+}
+
+.comentario {
+  background-color: #e4e4e4;
+  padding: 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  word-wrap: break-word;
+}
+
+h2 {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.comentar small#contador {
+  align-self: flex-end;
+  font-size: 13px;
+  color: #7043CA;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}

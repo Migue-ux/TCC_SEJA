@@ -1,0 +1,68 @@
+<!-- mensagens.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mensagens - Seja</title>
+  <link rel="stylesheet" href="style3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR LATERAL -->
+  <div class="nav-bar">
+    <div class="logo">
+      <a href="index.html"><img src="Image/Logo.png" alt="Logo" /></a>
+    </div>
+    <a href="#"><img class="avatar-home" src="Image/Avatar1.png" alt="Avatar" /></a>
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="mensagens.html" class="ativo">Mensagens</a>
+      <a href="diario.html">Diário Pessoal</a>
+      <a href="configuracoes.html">Configurações</a>
+      <a href="ajuda.html">Ajuda</a>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="conteiner">
+    <div class="chat-container">
+
+      <!-- LISTA DE CONVERSAS -->
+      <div class="lista-conversas" id="lista-conversas"></div>
+
+      <!-- ÁREA DE CHAT -->
+      <div class="chat-completo">
+        <div class="chat-header">
+          <h2>Selecione uma conversa</h2>
+        </div>
+        <div class="mensagens" id="mensagens"></div>
+
+
+
+
+
+        
+        <div class="chat-footer">
+          <button id="btnEmoji" class="emoji-toggle"><i class="far fa-smile"></i></button>
+          <div id="emojiPicker" class="emoji-picker hidden">
+            <span class="emoji">😀</span><span class="emoji">😂</span><span class="emoji">😍</span>
+            <span class="emoji">😎</span><span class="emoji">😢</span><span class="emoji">😡</span>
+            <span class="emoji">👍</span><span class="emoji">🙏</span><span class="emoji">🎉</span>
+            <span class="emoji">🥰</span><span class="emoji">😱</span><span class="emoji">🤔</span>
+            <span class="emoji">💀</span><span class="emoji">😭</span><span class="emoji">😴</span>
+            <span class="emoji">😇</span><span class="emoji">🔥</span><span class="emoji">💩</span>
+            <span class="emoji">💖</span><span class="emoji">🤯</span>
+          </div>
+          <textarea id="mensagemTexto" rows="2" placeholder="Digite sua mensagem..."></textarea>
+          <button id="btnEnviar">Enviar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script3.js"></script>
+</body>
+</html>
