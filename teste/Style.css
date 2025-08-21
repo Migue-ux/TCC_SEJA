@@ -12,6 +12,38 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.desc-container {
+    text-align: center;  /* centraliza o texto */
+    font-size: 16px;
+    margin: 0.5rem 0;
+}
+
+.desc-buttons {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center; /* centraliza ícone e botões */
+    gap: 5px;
+}
+
+.desc-buttons i {
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(179, 120, 228);
+    transition: color 0.3s;
+}
+
+.desc-buttons i:hover {
+    color: #fff;
+}
+
+.desc-buttons button {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+
 /* NAVBAR */
 .nav-bar {
   background-color: #121219;
