@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Compartilhar Comentário</title>
+  <link rel="stylesheet" href="/Style4.css" />
+</head>
+<body>
+
+  <!-- NAVBAR LATERAL -->
+  <div class="nav-bar">
+    <div class="logo">
+      <a href="/index.html"><img src="/Image/Logo.png" alt="Logo" /></a>
+    </div>
+    <a href="/perfil.html">
+      <img class="avatar-home" src="/Image/Avatar1.png" alt="Avatar" />
+    </a>
+    <div class="nav-links">
+      <a href="/index.html">Início</a>
+      <a href="/Mensagens.html">Mensagens</a>
+      <a href="/Diário Pessoal.html">Diário Pessoal</a>
+      <a href="/Configurações.html">Configurações</a>
+      <a href="/Ajuda.html">Ajuda</a>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="conteiner">
+    <div class="post-foto">
+      <h2>Comentário Compartilhado</h2>
+      <div class="comentario" id="comentario-box">
+        <p id="texto-comentario">"Este é o comentário que alguém compartilhou!"</p>
+      </div>
+
+      <div class="link-share">
+        <input type="text" id="link-comentario" value="https://www.Seja.com/sharer/sharer.php?u=compartilhar-comentario.html?" readonly />
+        <button id="copiar-link">Copiar Link</button>
+      </div>
+
+      <div class="botoes-compartilhar">
+        <button onclick="compartilharWhatsApp()">WhatsApp</button>
+        <button onclick="compartilharTelegram()">Telegram</button>
+        <button onclick="compartilharEmail()">E-mail</button>
+      </div>
+
+      <div id="notificacao">Link copiado com sucesso!</div>
+    </div>
+  </div>
+
+  <script src="/Script4.js"></script>
+    
+  
+
+</body>
+</html>

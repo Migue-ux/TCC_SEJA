@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #13293d;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  color: #fff;
+}
+
+/* NAVBAR */
+.nav-bar {
+  background: #121219;
+  width: 220px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.logo img { height: 120px; width: 150px; object-fit: contain; margin-bottom: 40px; }
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.nav-links a {
+  font-family: "Bungee", sans-serif;
+  text-decoration: none;
+  color: #7043CA;
+  font-weight: bold;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+.nav-links a:hover { background: #7043CA; color: #fff; }
+
+.avatar-home {
+  border: 2px solid #c2c2c2;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: auto;
+  margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.avatar-home:hover {
+  cursor: pointer;
+  border-color: #7043CA;
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* CONTEÚDO */
+.container {
+  margin-left: 220px; /* desloca o conteúdo para a direita da navbar */
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* PERFIL */
+.perfil-container {
+  background: #1e2b3c;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.perfil-container h2 {
+  font-family: 'Bungee', sans-serif;
+  color: #7043CA;
+  text-align: center;
+}
+
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.perfil-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #7043CA;
+  object-fit: cover;
+}
+
+.btn-avatar {
+  position: relative;
+  padding: 1rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: none;
+  border: 2px solid #646cff;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+
+.liquid {
+  background: linear-gradient(#646cff 0 0) no-repeat calc(200% - var(--p, 0%))
+    100% / 200% var(--p, 0.2em);
+  transition: 0.3s var(--t, 0s),
+    background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: #fff;
+}
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-section label {
+  font-weight: bold;
+  color: #fff;
+}
+
+.info-section input,
+.info-section textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+textarea { resize: none; min-height: 70px; }
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* 1. Pulse Animation */
+.btn-pulse {
+    border: #7043CA solid 2px;
+  background-color: transparent;
+  color: white;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+#notificacao-salvo {
+  opacity: 0; /* começa invisível */
+  transition: opacity 0.3s;
+  text-align: center;
+  margin-top: 10px;
+  color: #00ff94; /* verde sucesso */
+  font-weight: bold;
+  font-size: 14px;
+}
+.aviso {
+  position: fixed;
+  top: 20px; /* distância do topo da tela */
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0);
+  background: #ff4d4d; /* vermelho de alerta */
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+  opacity: 0;
+  z-index: 9999;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Classe que ativa o aviso */
+.aviso.show {
+  transform: translateX(-50%) translateY(0) scale(1);
+  opacity: 1;
+}
+
+
