@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #13293d;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+}
+
+.nav-bar {
+  background-color: #121219;
+  width: 220px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 40px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.nav-links a {
+  font-family: 'Bungee', sans-serif;
+  text-decoration: none;
+  color: #7043CA;
+  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.ativo {
+  background-color: #7043CA;
+  color: #fff;
+}
+
+.avatar-home {
+  border: 2px solid #c2c2c2;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: auto;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.avatar-home:hover {
+  transform: scale(1.05);
+  border-color: #7043CA;
+}
+
+.conteiner {
+  margin-left: 220px;
+  padding: 2rem;
+  flex: 1;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.chat-container {
+  display: flex;
+  height: 100%;
+  background: #cfaff8;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #000;
+}
+
+.lista-conversas {
+  width: 35%;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  background: #fffaff;
+}
+
+.conversa {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  background: #fffaff;
+  border: 1px solid #b4a0c4;
+}
+
+.conversa.ativo,
+.conversa:hover {
+  background: #ebe1f1;
+}
+
+.conversa img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.conversa .info .nome {
+  font-weight: bold;
+  color: #13293d;
+}
+
+.conversa .info .mensagem {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+.chat-completo {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  background: #a25bdb;
+}
+
+.chat-header h2 {
+  font-size: 1rem;
+  color: #13293d;
+}
+
+.mensagens {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-image: url('Image/fundo_msg.png');
+  background-size: cover;
+}
+
+.mensagem {
+  max-width: 70%;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.mensagem.outro {
+  background: #ab91ba;
+  align-self: flex-start;
+}
+
+.mensagem.eu {
+  background: #604878;
+  align-self: flex-end;
+}
+
+.chat-footer {
+  position: relative;
+  padding: 12px 16px;
+  border-top: 1px solid #ddd;
+  background: #c2afd5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chat-footer textarea {
+  flex: 1;
+  resize: none;
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fffaff;
+}
+
+.chat-footer button {
+  padding: 0 16px;
+  height: 40px;
+  background: #7043CA;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.chat-footer button:hover {
+  background: #4714ad;
+}
+
+.emoji-toggle {
+  height: 50px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-right: 8px;
+  color: #7043CA;
+}
+
+.emoji-picker {
+  position: absolute;
+  bottom: 60px;
+  left: 240px;
+  background: #c38eee;
+  border: 1px solid #7700ff;
+  border-radius: 8px;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+.emoji-picker.hidden {
+  display: none;
+}
+
+.emoji-picker .emoji {
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.emoji-picker .emoji:hover {
+  transform: scale(1.2);
+}
+

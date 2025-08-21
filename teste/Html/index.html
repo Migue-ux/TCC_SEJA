@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=edit_document" />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <div class="nav-bar">
+        <div class="logo">
+            <a href="/index.html"><img src="/Image/Logo.png" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a href="/index.html">Início</a>
+            <a href="/Chat.html">Mensagens</a>
+            <a href="/Diário Pessoal.html">Diário Pessoal</a>
+            <a href="/Configuracao.html">Configurações</a>
+            <a href="/Ajuda.html">Ajuda</a>
+        </div>
+        <a href="https://this-person-does-not-exist.com/pt">
+            <img class="avatar-home" src="/Image/Avatar1.png" alt="Avatar">
+        </a>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="conteiner">
+        <!-- PERFIL LATERAL -->
+    <div class="bar-perfil">
+    <img class="avatar" src="/Image/Avatar1.png" alt="Avatar">
+
+    <!-- Nome exibido -->
+    <h1>
+        <span id="displayName">Artur Maverick</span>
+        <input type="text" id="nameInput" style="display:none;">
+        
+        <i class="fa-solid fa-pen-to-square"  style="cursor:pointer; font-size:16px; color: rgb(179, 120, 228);" id="btnEditName" style="cursor:pointer;"></i>
+        <button id="btnSaveName" style="display:none;">Salvar</button>
+        <button id="btnCancelName" style="display:none;">Cancelar</button>
+    </h1>
+
+    <!-- Subtítulo exibido -->
+    <h3>
+        <span id="displaySubtitle">Quem sou eu aqui?</span>
+        
+    </h3>
+
+    <!-- Descrição exibida -->
+    <p>
+       <div class="desc-container">
+    <span id="displayDesc">
+        Um explorador curioso em <br> 
+        busca de aventuras e novas<br> 
+        ideias. Entusiasta de música<br> e café.
+    </span>
+    <textarea id="descInput" style="display:none; width:100%; height:100px;"></textarea>
+    <div class="desc-buttons">
+        <i class="fa-solid fa-note-sticky" id="btnEditDesc"></i>
+        <button id="btnSaveDesc" style="display:none;">Salvar</button>
+        <button id="btnCancelDesc" style="display:none;">Cancelar</button>
+    </div>
+
+
+
+
+</div>
+
+    </p>
+</div>
+
+        <!-- ÁREA DE POSTAGENS -->
+        <div class="area-postagens">
+            <!-- COMENTÁRIO -->
+            <div class="comentar">
+                <textarea id="comentarioTexto" placeholder="Escreva um comentário..."></textarea>
+                <small id="contador">0 / 300</small>
+                <button id="btnComentar">Comentar</button>
+            </div>
+            <div class="comentarios"></div> <!-- Container para comentários -->
+
+            <!-- POST COM TEXTO -->
+            <div class="post">
+                <img src="/Image/Avatar1.png" alt="Avatar">
+                <h2>Artur Maverick</h2>
+                <p>Hoje foi um dia incrível! Descobri um novo lugar para explorar e me diverti muito.<br>
+                Mal posso esperar para compartilhar mais aventuras com vocês!</p>
+                <div class="reactions">
+                    <button class="like-button"><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
+                    <a href="/comentar.html"><button class="comment-button"><i class="fa-solid fa-comment"></i> Comentar</button></a>
+                    <a href="/Compartilhar.html"><button class="share-button"><i class="fa-solid fa-share"></i> Compartilhar</button></a>
+                </div>
+            </div>
+
+            <!-- POST COM IMAGEM -->
+            <div class="post-foto">
+                <img class="avatar-post" src="/Image/Avatar1.png" alt="Avatar">
+                <h2>Artur Maverick</h2>
+                <img class="foto-post" src="/Image/tigre.png" alt="Foto Postagem">
+                <div class="reactions">
+                    <button class="like-button"><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
+                    <a href="/comentar.html"><button class="comment-button"><i class="fa-solid fa-comment"></i> Comentar</button></a>
+                    <button class="share-button"><i class="fa-solid fa-share"></i> Compartilhar</button>
+                </div>
+            </div>
+
+            <!-- POST COM TEXTO E IMAGEM -->
+            <div class="post-foto">
+                <img class="avatar-post" src="/Image/Avatar1.png" alt="Avatar">
+                <h2>Artur Maverick</h2>
+                <img class="foto-post" src="/Image/logoOFc_bg.png" alt="Foto Postagem">
+                <p>Hoje foi um dia incrível! Descobri um novo lugar para explorar e me diverti muito.<br>
+                Mal posso esperar para compartilhar mais aventuras com vocês!</p>
+                <div class="reactions">
+                    <button class="like-button"><i class="fa-solid fa-thumbs-up"></i> Curtir</button>
+                    <a href="/comentar.html"><button class="comment-button"><i class="fa-solid fa-comment"></i> Comentar</button></a>
+                    <button class="share-button"><i class="fa-solid fa-share"></i> Compartilhar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+    <script src="Script12.js"></script>
+</body>
+</html>

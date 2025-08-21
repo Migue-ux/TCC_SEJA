@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil & Configurações</title>
+  <link rel="stylesheet" href="/ConfigPerfil.css">
+</head>
+<body>
+
+  <!-- NAVBAR LATERAL -->
+  <div class="nav-bar">
+    <div class="logo">
+      <a href="/index.html"><img src="/Image/Logo.png" alt="Logo"></a>
+    </div>
+    <a href="/perfil.html">
+      <img class="avatar-home" src="/Image/Avatar1.png" alt="Avatar">
+    </a>
+    <div class="nav-links">
+      <a href="/index.html">Início</a>
+      <a href="/Mensagens.html">Mensagens</a>
+      <a href="/Diário Pessoal.html">Diário Pessoal</a>
+      <a href="/Configurações.html">Configurações</a>
+      <a href="/Ajuda.html">Ajuda</a>
+    </div>
+  </div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <div class="container">
+    <div class="perfil-container">
+      <h2>Configurações do Perfil</h2>
+
+      <!-- Avatar -->
+      <div class="avatar-section">
+        <img src="/Image/Avatar1.png" alt="Avatar" class="perfil-avatar">
+        <button class="btn-avatar liquid ">Alterar Avatar</button>
+      </div>
+
+      <!-- Informações -->
+      <div class="info-section">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" value="Miguel Ferreira">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" value="miguel@email.com">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" value="123456">
+
+        <label for="bio">Biografia:</label>
+        <textarea id="bio" placeholder="Escreva algo sobre você...">Sou estudante de informática.</textarea>
+
+        <button  class="btn btn-pulse">Salvar</button>
+
+      </div>
+
+      <!-- Aviso -->
+      <div id="aviso-comentario" class="aviso"></div>
+
+    </div>
+  </div>
+
+  <script src="/Script5.js"></script>
+</body>
+</html>

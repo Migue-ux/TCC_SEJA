@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diário Pessoal — Seja</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Estilo específico do Diário -->
+  <link rel="stylesheet" href="/Style6.css">
+</head>
+<body>
+
+  <!-- NAVBAR LATERAL (mantive seu padrão visual) -->
+  <nav class="nav-bar" aria-label="Navegação principal">
+    <!-- botão hambúrguer (aparece em telas pequenas) -->
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
+      <span class="hamb"></span>
+    </button>
+
+    <div class="logo">
+      <a href="/index.html"><img src="/Image/Logo.png" alt="Logo Seja"></a>
+    </div>
+
+    <a class="avatar-link" href="#">
+      <img class="avatar-home" src="/Image/Avatar1.png" alt="Avatar do usuário">
+    </a>
+
+    <div class="nav-links" role="navigation" aria-label="links principais">
+      <a href="/index.html">Início</a>
+      <a href="/Mensagens.html">Mensagens</a>
+      <a href="/Diário Pessoal.html" class="active">Diário Pessoal</a>
+      <a href="/Configurações.html">Configurações</a>
+      <a href="/Ajuda.html">Ajuda</a>
+    </div>
+  </nav>
+
+  <!-- overlay para quando a sidebar estiver aberta em mobile -->
+  <div id="sidebarOverlay" class="sidebar-overlay" hidden></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="conteiner" id="maincontent">
+    <header class="hero">
+      <div class="hero-left">
+        <h1>Diário Pessoal</h1>
+        <p class="lead">Registre seus pensamentos, ideias e memórias. Tudo salvo localmente — privado por padrão.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="novo-btn" class="btn-primary"><i class="fas fa-plus"></i> Nova entrada</button>
+        <button id="export-btn" class="btn-outline"><i class="fas fa-file-export"></i> Exportar</button>
+        <label class="btn-outline btn-file">
+          <i class="fas fa-file-import"></i> Importar
+          <input id="import-input" type="file" accept="application/json">
+        </label>
+      </div>
+    </header>
+
+    <section class="tools-row" aria-label="Ferramentas do diário">
+      <input id="search-input" type="search" placeholder="Pesquisar entradas..." aria-label="Pesquisar no diário">
+      <select id="tag-filter" aria-label="Filtrar por tag">
+        <option value="">Filtrar por tag</option>
+      </select>
+      <select id="order-select" title="Ordenar" aria-label="Ordenar entradas">
+        <option value="newest">Mais recentes</option>
+        <option value="oldest">Mais antigas</option>
+        <option value="fav">Somente favoritos</option>
+      </select>
+    </section>
+
+    <section id="entries-list" class="entries-grid" aria-live="polite" aria-label="Lista de entradas">
+      <!-- cards gerados por JS -->
+    </section>
+
+    <footer class="site-footer">
+      <span>© <strong>Seja</strong> — Diário Pessoal</span>
+      <nav class="footer-links">
+        <a href="/politica-privacidade.html">Política de Privacidade</a>
+      </nav>
+    </footer>
+  </main>
+
+  <!-- MODAL: criar / editar -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <header class="modal-header">
+        <h3 id="modal-title">Nova entrada</h3>
+        <button id="modal-close" class="icon-btn" title="Fechar" aria-label="Fechar modal"><i class="fas fa-times"></i></button>
+      </header>
+
+      <form id="entry-form" class="modal-body" novalidate>
+        <input id="entry-id" type="hidden">
+        <label for="entry-title">Título</label>
+        <input id="entry-title" type="text" placeholder="Título da entrada" required>
+
+        <label for="entry-text">Texto</label>
+        <textarea id="entry-text" rows="8" placeholder="Escreva aqui..." required></textarea>
+
+        <label for="entry-tags">Tags (separadas por vírgula)</label>
+        <input id="entry-tags" type="text" placeholder="ex: ideias, estudo">
+
+        <div class="row-between">
+          <label class="switch" title="Privacidade">
+            <input id="entry-private" type="checkbox" checked>
+            <span class="slider" aria-hidden="true"></span>
+          </label>
+          <small class="muted">Privado</small>
+
+          <div style="flex:1"></div>
+
+          <button type="submit" class="btn-primary"><i class="fas fa-save"></i> Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- CONFIRM MODAL -->
+  <div id="confirm-modal" class="modal" aria-hidden="true">
+    <div class="modal-panel small">
+      <header class="modal-header">
+        <h3 id="confirm-title">Confirmar exclusão</h3>
+      </header>
+      <div class="modal-body">
+        <p id="confirm-msg">Tem certeza que deseja excluir esta entrada?</p>
+        <div class="form-actions">
+          <button id="confirm-cancel" class="btn-ghost">Cancelar</button>
+          <button id="confirm-ok" class="btn-primary">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="/Script7.js"></script>
+</body>
+</html>

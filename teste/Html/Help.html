@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Central de Suporte — Seja</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="/Style5.css">
+</head>
+<body>
+  <!-- NAVBAR LATERAL (mantive seu padrão visual) -->
+  <nav class="nav-bar" aria-label="Navegação principal">
+    <div class="logo">
+      <a href="/index.html"><img src="/Image/Logo.png" alt="Logo Seja"></a>
+    </div>
+
+    <a class="avatar-link" href="#">
+      <img class="avatar-home" src="/Image/Avatar1.png" alt="Avatar do usuário">
+    </a>
+
+    <div class="nav-links" role="navigation" aria-label="links principais">
+      <a href="/index.html">Início</a>
+      <a href="/Mensagens.html">Mensagens</a>
+      <a href="/Diário Pessoal.html">Diário Pessoal</a>
+      <a href="/Configurações.html">Configurações</a>
+      <a href="/Ajuda.html" class="active">Ajuda</a>
+    </div>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="conteiner" id="maincontent">
+    <header class="hero">
+      <div class="hero-left">
+        <h1>Central de Suporte</h1>
+        <p class="lead">Dúvidas, suporte técnico e informações oficiais da plataforma. Estamos aqui para ajudar.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="abrir-ticket-btn" class="btn-outline"><i class="fas fa-ticket-alt"></i> Abrir chamado</button>
+        <a class="btn-primary" href="#faq"><i class="fas fa-question-circle"></i> Ver FAQ</a>
+      </div>
+    </header>
+
+    <section class="grid-3 top-cards" aria-label="Informações de contato e horário">
+      <!-- Contato -->
+      <article class="card">
+        <h3><i class="fas fa-envelope"></i> Contato</h3>
+        <p><strong>Email:</strong> suporte@seja.com</p>
+        <p><strong>Telefone:</strong> (11) 90000-0000</p>
+      </article>
+
+      <!-- Endereço -->
+      <article class="card">
+        <h3><i class="fas fa-map-marker-alt"></i> Endereço</h3>
+        <p>Rua da Imaginação, 123 — São Paulo / SP</p>
+      </article>
+
+      <!-- Horário -->
+      <article class="card">
+        <h3><i class="fas fa-clock"></i> Horário de atendimento</h3>
+        <p>Seg–Sex: 09:00 — 18:00</p>
+        <p>Sáb (suporte emergencial): 10:00 — 14:00</p>
+      </article>
+    </section>
+
+    <!-- Formulário de chamado (padrão "empresa") -->
+    <section class="card form-card" id="ticket-form-section" aria-labelledby="ticket-title">
+      <h2 id="Ticket-title"><i class="fas fa-headset"></i> Abrir chamado</h2>
+      <p class="muted">Descreva o problema com o máximo de detalhes possível. Nosso time entrará em contato dentro do horário comercial.</p>
+
+      <form id="ticket-form" novalidate>
+        <div class="form-row">
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required>
+        </div>
+
+        <div class="form-row">
+          <label for="categoria">Categoria</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Escolha uma categoria</option>
+            <option>Problema técnico</option>
+            <option>Conta / Segurança</option>
+            <option>Pagamentos</option>
+            <option>Sugestão</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva o problema"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Enviar chamado</button>
+          <button type="button" id="cancelar-ticket" class="btn-ghost">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- FAQ com busca -->
+    <section id="faq" class="card faq-card" aria-labelledby="faq-title">
+      <div class="faq-header">
+        <h2 id="faq-title"><i class="fas fa-question-circle"></i> Perguntas Frequentes</h2>
+        <div class="search-wrapper">
+          <input id="faq-search" type="search" placeholder="Pesquisar FAQ..." aria-label="Pesquisar perguntas frequentes">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+
+      <div class="faq-list" role="list">
+        <!-- faq-item template -->
+        <article class="faq-item" role="listitem">
+          <button class="faq-toggle" aria-expanded="false">
+            <span class="q">Como altero meu perfil?</span>
+            <i class="chev fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-body" hidden>
+            <p>Vá em <strong>Configurações</strong> no menu lateral. Lá você pode alterar nome, email, senha, biografia e avatar.</p>
+          </div>
+        </article>
+
+        <article class="faq-item" role="listitem">
+          <button class="faq-toggle" aria-expanded="false">
+            <span class="q">Esqueci minha senha — e agora?</span>
+            <i class="chev fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-body" hidden>
+            <p>Na tela de login clique em "Esqueci minha senha" e siga os passos. Se não receber o email, verifique a pasta de spam.</p>
+          </div>
+        </article>
+
+        <article class="faq-item" role="listitem">
+          <button class="faq-toggle" aria-expanded="false">
+            <span class="q">Como excluir minha conta?</span>
+            <i class="chev fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-body" hidden>
+            <p>Para solicitar exclusão entre em contato pelo email <strong>suporte@seja.com</strong>. A exclusão é processada em até 7 dias úteis.</p>
+          </div>
+        </article>
+
+        <article class="faq-item" role="listitem">
+          <button class="faq-toggle" aria-expanded="false">
+            <span class="q">Como reporto um conteúdo impróprio?</span>
+            <i class="chev fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-body" hidden>
+            <p>Use a opção de denúncia no post ou envie o link e detalhes ao suporte. Nosso time avaliará e tomará providências.</p>
+          </div>
+        </article>
+
+        <!-- adicione mais itens conforme necessário -->
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <strong>Seja</strong> — Suporte & Atendimento</span>
+      <nav class="footer-links">
+        <a href="/politica-privacidade.html">Política de Privacidade</a>
+        <a href="/termos.html">Termos</a>
+      </nav>
+    </footer>
+  </main>
+
+  <!-- Toast de confirmação (invisível até necessário) -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Script -->
+  <script src="/Script6.js"></script>
+</body>
+</html>
